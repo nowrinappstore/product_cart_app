@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 /// A single product in the local catalog.
@@ -20,6 +21,17 @@ class Product {
     required this.category,
     required this.imageUrl,
   });
+  factory Product.fromDoc(DocumentSnapshot<Map<String, dynamic>> doc) {
+    final d = doc.data() ?? {};
+    return Product(
+      id: (d['id'] as num?)?.toInt() ?? doc.id.hashCode,
+      name: d['name'] ?? '',
+      price: (d['price'] ?? 0).toDouble(),
+      icon: Icons.shopping_bag_rounded, // fallback icon
+      category: d['category'] ?? 'General',
+      imageUrl: d['imageUrl'] ?? '',
+    );
+  }
 }
 
 /// Local, hard-coded product catalog (no backend / Firebase / API / DB).
