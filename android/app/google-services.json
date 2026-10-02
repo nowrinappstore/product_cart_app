@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "617079265736",
+    "project_id": "nowrin-store-1",
+    "storage_bucket": "nowrin-store-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617079265736:android:91a49a604545b518ec48fd",
+        "android_client_info": {
+          "package_name": "com.example.product_cart_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617079265736-5d46tt96ehhlhadg8epluoln9bfqcegh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.product_cart_app",
+            "certificate_hash": "ceefcfa8468f6374b82cbfddf95e5d1640044934"
+          }
+        },
+        {
+          "client_id": "617079265736-fsar6kosqn73fi3gjfjbjkm2d3j7e9nt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjb88ugEL9jJzxrEAbF2JWa7jTGRtEd60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617079265736-fsar6kosqn73fi3gjfjbjkm2d3j7e9nt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "617079265736-vlrr5c9vhelqsskq5pnlvljhi4l38g7g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.productCartApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
