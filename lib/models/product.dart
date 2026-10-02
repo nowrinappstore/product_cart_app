@@ -10,6 +10,7 @@ class Product {
   final double price;
   final IconData icon;
   final String category;
+  final String imageUrl;
 
   const Product({
     required this.id,
@@ -17,6 +18,7 @@ class Product {
     required this.price,
     required this.icon,
     required this.category,
+    required this.imageUrl,
   });
 }
 
@@ -25,6 +27,7 @@ final List<Product> productCatalog = [
   Product(
     id: 1,
     name: 'Wireless Headphones',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/nowrin-store-1.firebasestorage.app/o/products%2Fmosur%20dal.jpeg?alt=media&token=871f5c83-c96c-4e82-86e9-3b63d5ab4160',
     price: 1850,
     icon: Icons.headphones_rounded,
     category: 'Electronics',
@@ -32,11 +35,12 @@ final List<Product> productCatalog = [
   Product(
     id: 2,
     name: 'Smart Watch',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/nowrin-store-1.firebasestorage.app/o/products%2Fmosur%20dal.jpeg?alt=media&token=871f5c83-c96c-4e82-86e9-3b63d5ab4160',
     price: 3200,
     icon: Icons.watch_rounded,
     category: 'Electronics',
   ),
-  Product(
+ /* Product(
     id: 3,
     name: 'Cotton T-Shirt',
     price: 650,
@@ -77,7 +81,7 @@ final List<Product> productCatalog = [
     price: 1999,
     icon: Icons.speaker_rounded,
     category: 'Electronics',
-  ),
+  ),*/
 ];
 
 /// All distinct categories in the catalog, plus a leading "All" filter option.

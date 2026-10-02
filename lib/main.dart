@@ -1,32 +1,25 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'providers/cart_provider.dart';
-import 'providers/filter_provider.dart';
-import 'screens/product_list_screen.dart';
+import 'package:product_cart_app/screens/login_screen.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const ProductCartApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
 }
 
-class ProductCartApp extends StatelessWidget {
-  const ProductCartApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => CartProvider()),
-        ChangeNotifierProvider(create: (_) => FilterProvider()),
-      ],
-      child: MaterialApp(
-        title: 'Product Cart App',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFE0073A)),
-          useMaterial3: true,
-        ),
-        home: const ProductListScreen(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Nowrin Store',
+      home: const LoginScreen(),
     );
   }
 }
